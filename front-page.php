@@ -15,26 +15,21 @@ get_header();
 
 		<?php
 
-			global $post;
 			$args = array(
-					'posts_per_page'   => 5,
-					'offset'           => 0,
-					'cat'         		 => '',
-					'category_name'    => '',
-					'orderby'          => 'date',
-					'order'            => 'DESC',
-					'include'          => '',
-					'post__not_in'     => array(get_the_id(5)),
-					'post_type'        => 'page'
-					);
+				'post_type'   	=> 'page',
+				'post__not_in' => array('5')
+			);
 
-			$mypages = get_posts( $args );
-			foreach ( $mypages as $post ) :
-			  setup_postdata( $post ); ?>
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<?php the_content(); ?>
-			<?php endforeach;
-			wp_reset_postdata(); ?>
+			$wc_pages = new WP_Query( $args );
+
+			if ($wc_pages->have_posts()) :
+					while ($wc_pages->have_posts()) : $wc_pages->the_post();?>
+							<section id="page-<?php echo ++$i; ?>"><?php the_content(); ?></section>
+					<?php endwhile;
+			endif;
+			wp_reset_postdata();
+
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
