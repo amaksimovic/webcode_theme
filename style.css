@@ -836,6 +836,42 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.site-branding {
+	background-color: #535353;
+	color: #c5c5c5;
+}
+
+.header-top {
+	height: 50px;
+	line-height: 50px;
+	background-color: #535353;
+	color: #c5c5c5;
+}
+
+.header-social .fab {
+	padding: 5px;
+}
+
+.header-contact {
+	margin: 0;
+}
+
+.header-contact li {
+	float: left;
+	overflow: hidden;
+	margin-right: 20px;
+	list-style-type: none;
+}
+
+.header-offer {
+	height: 50px;
+	background-color: #66b266;
+	color: #FFF;
+}
+
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {

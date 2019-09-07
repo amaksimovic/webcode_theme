@@ -15,9 +15,14 @@ get_header();
 
 		<?php
 
+			$ids = array(9,12,16,14,23,18);
+
 			$args = array(
 				'post_type'   	=> 'page',
-				'post__not_in' => array('5')
+				'post__not_in' 	=> array(5,34,37),
+				'post__in'			=> $ids,
+				'orderby'				=> 'post__in',
+				'order'					=> 'ASC'
 			);
 
 			$wc_pages = new WP_Query( $args );

@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<script src="https://kit.fontawesome.com/deed06ce8e.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -25,34 +25,48 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'webcode' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$webcode_description = get_bloginfo( 'description', 'display' );
-			if ( $webcode_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $webcode_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 clearfix">
+						<div class="header-social float-left">
+							<a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						</div><!-- .header-social -->
+						<div class="header-offer float-right">
+							<a href="">TOP PONUDA</a>
+						</div><!-- .header-offer -->
+						<ul class="header-contact float-right">
+							<li><i class="fas fa-phone-alt"></i> 064 2415-928</li>
+							<li><i class="fas fa-map-marker-alt"></i> Bogoljuba Čukića 44</li>
+						</ul><!-- .header-contact -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .header-top -->
+		<div class="header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 clearfix">
+						<div class="header-title">
+							<img src="" alt="logo">
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						</div><!-- .header-title -->
+						<nav id="site-navigation" class="main-navigation float-right">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
+							<?php
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							) );
+							?>
+						</nav><!-- #site-navigation -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .header-bottom -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
