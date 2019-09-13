@@ -50,9 +50,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 clearfix">
-						<div class="header-title">
-							<img src="" alt="logo">
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<div class="header-title float-left">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" class="img-fluid" width="150">
 						</div><!-- .header-title -->
 						<nav id="site-navigation" class="main-navigation float-right">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
