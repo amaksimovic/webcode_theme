@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'webcode' ); ?></a>
 
@@ -43,8 +44,8 @@
 							<li><i class="fas fa-map-marker-alt"></i> Bogoljuba Čukića 44</li>
 						</ul><!-- .header-contact -->
 					</div>
-				</div>
-			</div>
+				</div><!-- .row -->
+			</div><!-- .container -->
 		</div><!-- .header-top -->
 		<div class="header-bottom">
 			<div class="container">
