@@ -691,6 +691,10 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
+.nav-menu {
+	float: right;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -846,7 +850,7 @@ a:hover, a:active {
 	color: #c5c5c5;
 }
 
-.header-top {
+#header-top {
 	height: 50px;
 	line-height: 50px;
 	background-color: #535353;
@@ -859,6 +863,7 @@ a:hover, a:active {
 
 .header-contact {
 	margin: 0;
+	float: right;
 }
 
 .header-contact li {
@@ -872,6 +877,7 @@ a:hover, a:active {
 	height: 50px;
 	background-color: #66b266;
 	color: #FFF;
+	float: right;
 }
 
 .header-bottom {

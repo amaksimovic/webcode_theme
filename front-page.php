@@ -16,8 +16,8 @@ get_header();
 			<section id="main-slider">
 				<?php
 					$id = 9;
-					$p = get_page($id);
-					echo apply_filters('the_content', $p->post_content);
+					$slider = get_page($id);
+					echo apply_filters('the_content', $slider->post_content);
 				?>
 			</section><!-- #main-slider -->
 
@@ -28,7 +28,7 @@ get_header();
 				</header>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn1.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -37,7 +37,7 @@ get_header();
 						    </div><!-- .media-body -->
 						  </div><!-- .media -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn2.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -46,7 +46,7 @@ get_header();
 						    </div><!-- .media-body -->
 						  </div><!-- .media -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn3.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -55,7 +55,7 @@ get_header();
 						    </div><!-- .media-body -->
 						  </div><!-- .media -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn4.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -64,7 +64,7 @@ get_header();
 						    </div><!-- .media-body -->
 						  </div><!-- .media -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn5.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -73,7 +73,7 @@ get_header();
 						    </div><!-- .media-body -->
 						  </div><!-- .media -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 						  <div class="media p-3">
 						    <img src="<?php echo get_template_directory_uri(); ?>/img/serv-icn1.png" alt="service" class="mr-3 mt-3 rounded-circle" style="width:30px;">
 						    <div class="media-body">
@@ -103,7 +103,7 @@ get_header();
 				</header>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 							<div class="card" style="width:400px">
 						    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
 						    <div class="card-body">
@@ -113,7 +113,7 @@ get_header();
 						    </div><!-- .card-body -->
 						  </div><!-- .card -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 							<div class="card" style="width:400px">
 						    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
 						    <div class="card-body">
@@ -123,7 +123,7 @@ get_header();
 						    </div><!-- .card-body -->
 						  </div><!-- .card -->
 						</div><!-- .col-md-4 -->
-						<div class="col-md-4 col-12">
+						<div class="col-md-4">
 							<div class="card" style="width:400px">
 						    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
 						    <div class="card-body">
@@ -140,13 +140,13 @@ get_header();
 			<section id="main-subscribe">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-12">
+						<div class="col-md-6">
 							<header class="entry-header">
 								<h3 class="entry-title">Subscribe to Our Newsletter</h3>
 								<p class="subtitle">We have been on web marketing for 12 years helping you compete on Internet and converting your visitors</p>
 							</header>
 						</div><!-- .col-md-6 -->
-						<div class="col-md-6 col-12">
+						<div class="col-md-6">
 							<p>neki input field sa search dugmetom</p>
 						</div><!-- .col-md-6 -->
 					</div><!-- .row -->
@@ -158,44 +158,68 @@ get_header();
 					<h3 class="entry-title">Recent Case Studies</h3>
 					<p class="subtitle">USING OUR SEO COMPANY'S</p>
 				</header>
-				<?php
-				if ( have_posts() ) :
+				<div class="container">
 
-					if ( is_home() && ! is_front_page() ) :
-						?>
-						<header>
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</header>
 						<?php
-					endif;
 
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
+						$latestPosts = new WP_Query( array(
+				      'posts_per_page' => 2,
+				   	));
 
-						/*
-						 * Include the Post-Type-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_type() );
+						if ( $latestPosts->have_posts() ) :
 
-					endwhile;
+							?><div class="row"><?php
 
-					the_posts_navigation();
+							if ( is_home() && ! is_front_page() ) :	?>
+								<header>
+									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+								</header>
+								<?php
+							endif;
 
-				else :
+							/* Start the Loop */
+							while ( $latestPosts->have_posts() ) :
+								$latestPosts->the_post();	?>
 
-					get_template_part( 'template-parts/content', 'none' );
+								<div class="col-md-6">
 
-				endif;
-				?>
+								<?php
+								/*
+								 * Include the Post-Type-specific template for the content.
+								 * If you want to override this in a child theme, then include a file
+								 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+								 */
+								get_template_part( 'template-parts/content', get_post_type() );
+								?>
 
+							</div><!-- .col-md-6 -->
+
+							<?php	endwhile;
+
+							the_posts_navigation();
+
+						else :
+
+							get_template_part( 'template-parts/content', 'none' );
+
+						endif;
+						?>
+					</div><!-- .row -->
+				</div><!-- .container -->
 			</section><!-- #main-blog -->
 
 			<section id="main-testemonials">
-
-				<p>možda slider<p>
+				<header class="entry-header">
+					<h3 class="entry-title">Happy Clients About Us</h3>
+					<p class="subtitle">WHAT WE GET USING OUR SEO COMPANY'S</p>
+				</header>
+				<div class="container-fluid">
+				<?php
+					$id = 18;
+					$testemonials = get_page($id);
+					echo apply_filters('the_content', $testemonials->post_content);
+				?>
+				</div>
 			</section><!-- #main-testemonials -->
 
 		</main><!-- #main -->

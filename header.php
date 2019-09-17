@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'webcode' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="header-top">
+		<div id="header-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 clearfix">
@@ -46,15 +46,17 @@
 					</div>
 				</div><!-- .row -->
 			</div><!-- .container -->
-		</div><!-- .header-top -->
+		</div><!-- #header-top -->
 		<div class="header-bottom">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 clearfix">
-						<div class="header-title float-left">
+					<div class="col-md-6">
+						<div class="header-title">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" class="img-fluid" width="150">
 						</div><!-- .header-title -->
-						<nav id="site-navigation" class="main-navigation float-right">
+					</div><!-- .col-md-6 -->
+					<div class="col-md-6">
+						<nav id="site-navigation" class="main-navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
 							<?php
 							wp_nav_menu( array(
@@ -63,9 +65,9 @@
 							) );
 							?>
 						</nav><!-- #site-navigation -->
-					</div>
-				</div>
-			</div>
+					</div><!-- .col-md-6 -->
+				</div><!-- .row -->
+			</div><!-- .container -->
 		</div><!-- .header-bottom -->
 	</header><!-- #masthead -->
 
