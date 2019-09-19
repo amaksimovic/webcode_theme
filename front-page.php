@@ -96,7 +96,7 @@ get_header();
 				<a href="#" class="btn" role="button">CONTACT US</a>
 			</section><!-- #main-portfolio -->
 
-			<section id="main-packages">
+			<section id="main-packages" class="parallax">
 				<header class="entry-header">
 					<h3 class="entry-title">Our Pricing Packages</h3>
 					<p class="subtitle">USING OUR SEO COMPANY'S</p>
@@ -147,7 +147,12 @@ get_header();
 							</header>
 						</div><!-- .col-md-6 -->
 						<div class="col-md-6">
-							<p>neki input field sa search dugmetom</p>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Send">
+								<div class="input-group-append">
+									<button class="btn btn-success" type="submit">SEND</button>
+								 </div>
+							</div>
 						</div><!-- .col-md-6 -->
 					</div><!-- .row -->
 				</div><!-- .container -->

@@ -13,8 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<button onclick="topFunction()" id="scrollTop" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
 
+	<footer id="colophon" class="site-footer">
+		<div id="footer-top">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -46,14 +48,33 @@
 					</div><!-- .clearfix -->
 				</div><!-- .col-md-4 -->
 				<div class="col-md-4">
-					<p><b>CONTACT US</b></p>
+					<div id="footer-form">
+						<p><b>CONTACT US</b></p>
+						<div class="form-group clearfix">
+						  <p><input type="text" class="form-control" id="name" placeholder="Name"></p>
+						  <p><input type="text" class="form-control" id="email" placeholder="Email Address"></p>
+						  <p><input type="text" class="form-control" id="subject" placeholder="Subject"></p>
+							<p><textarea class="form-control" rows="5" id="message" placeholder="Message"></textarea></p>
+							<p><button type="button" class="btn btn-primary btn-md float-right">Default</button></p>
+						</div><!-- #footer-form -->
+					</div>
 				</div><!-- .col-md-4 -->
 				<div class="col-md-4">
+					<div id="footer-recent">
 					<p><b>LATEST POSTS</b></p>
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+						<ul>
+						<?php $recent_posts = new WP_Query( 'posts_per_page=4' );
+							while ($recent_posts->have_posts()) : $recent_posts->the_post();?>
+							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+							<li><small><?php the_date(); ?></small></li>
+							<hr>
+							<?php endwhile;wp_reset_postdata();?>
+						</ul>
+					</div><!-- #footer-recent -->
 				</div><!-- .col-md-4 -->
 			</div><!-- .row -->
 		</div><!-- .container -->
+		</div>
 
 		<div class="site-info text-center">
 			<small>Copyright &copy; <?php echo date("Y"); ?>&nbsp; |
