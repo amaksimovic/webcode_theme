@@ -47,16 +47,14 @@
 				</div><!-- .row -->
 			</div><!-- .container -->
 		</div><!-- #header-top -->
-		<div class="header-bottom">
+		<div class="header-bottom clearfix">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="header-title">
+					<div class="col-12">
+						<div class="header-title float-left">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" class="img-fluid" width="150">
 						</div><!-- .header-title -->
-					</div><!-- .col-md-6 -->
-					<div class="col-md-6">
-						<nav id="site-navigation" class="main-navigation">
+						<nav id="site-navigation" class="main-navigation float-left">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
 							<?php
 							wp_nav_menu( array(
@@ -65,7 +63,20 @@
 							) );
 							?>
 						</nav><!-- #site-navigation -->
-					</div><!-- .col-md-6 -->
+						<div class="sidebar-icon float-right" onclick="openNav()">
+							<div class="menu-line"></div>
+							<div class="menu-line"></div>
+							<div class="menu-line"></div>
+						</div><!-- .sidebar-icon -->
+						<div id="sidebar-info" class="sidenav">
+						  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						  <a href="#">About</a>
+						  <a href="#">Services</a>
+						  <a href="#">Clients</a>
+						  <a href="#">Contact</a>
+						</div><!-- #sidebar-info -->
+
+					</div><!-- .col-12 -->
 				</div><!-- .row -->
 			</div><!-- .container -->
 		</div><!-- .header-bottom -->
