@@ -22,6 +22,46 @@
     document.documentElement.scrollTop = 0;
   }
 
+  // Smooth scroll jQuery
+  jQuery(document).ready(function(){
+    // Add smooth scrolling to all links
+    jQuery("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        jQuery('html, body').animate({
+          scrollTop: jQuery(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+
+      // Hover effect on everything but the hovered link
+      jQuery('.header-social a').mouseover(function () {
+          jQuery('.header-social a').not(jQuery(this)).addClass('hover');
+      });
+
+      jQuery('.header-social a').mouseout(function () {
+          jQuery('.header-social a').not(jQuery(this)).removeClass('hover');
+      });
+
+  });
+
+    jQuery(document).ready(function(){
+
+  });
+
 /** Sidebar **/
 
   function openNav() {

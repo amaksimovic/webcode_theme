@@ -31,10 +31,10 @@
 				<div class="row">
 					<div class="col-12 clearfix">
 						<div class="header-social float-left">
-							<a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-							<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-							<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-							<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 						</div><!-- .header-social -->
 						<div class="header-offer float-right">
 							<a href="">TOP PONUDA</a>
