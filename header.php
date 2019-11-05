@@ -37,7 +37,7 @@
 							<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 						</div><!-- .header-social -->
 						<div class="header-offer float-right">
-							<a href="">TOP PONUDA</a>
+							<a href="">BEST OFFER</a>
 						</div><!-- .header-offer -->
 						<ul class="header-contact float-right">
 							<li><i class="fas fa-phone-alt"></i> 064 2415-928</li>

@@ -625,16 +625,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	/* color: royalblue; */
 }
 
 a:visited {
-	color: purple;
+	/* color: purple; */
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
-
+	/* color: midnightblue; */
+	text-decoration: none!important;
 }
 
 a:focus {
@@ -652,6 +652,23 @@ a:hover, a:active {
 
 .hover {
 	background-color: #b1b1b1;
+}
+
+.header-offer a:link,
+.header-offer a:visited {
+	color: #FFF;
+	background-color: #008056;
+	transition: background-color 200ms linear, color 200ms linear;
+}
+
+.header-offer a:hover {
+	color: #008056;
+	background-color: #FFF;
+}
+
+.header-offer a:active {
+	color: #FFF;
+	background-color: #008056;
 }
 
 #scrollTop {
@@ -908,20 +925,21 @@ a:hover, a:active {
 }
 
 #header-top {
-	height: 50px;
+	/* height: 50px; */
 	line-height: 50px;
 	background-color: #535353;
 	color: #c5c5c5;
 }
 
 .header-social .fab {
-	padding: 5px;
+	padding: 7px;
 	color: #535353;
 }
 
 .header-contact {
 	margin: 0;
 	float: right;
+	font-size: 0.9rem;
 }
 
 .header-contact li {
@@ -931,10 +949,11 @@ a:hover, a:active {
 	list-style-type: none;
 }
 
-.header-offer {
-	/* height: 50px; */
-	background-color: #66b266;
+.header-offer a {
+	padding: 0 20px;
+	background-color: #008056;
 	color: #FFF;
+	letter-spacing: 1px;
 	float: right;
 }
 
