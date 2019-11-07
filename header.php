@@ -52,14 +52,15 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header-title float-left">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo" class="img-fluid" width="150">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="logo" class="img-fluid" width="50">
+							<span>WebCode</span>
 						</div><!-- .header-title -->
 						<nav id="site-navigation" class="main-navigation float-left">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
+								'menu_id'        => 'primary-menu'
 							) );
 							?>
 						</nav><!-- #site-navigation -->

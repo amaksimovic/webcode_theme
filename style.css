@@ -57,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800|Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800|Roboto:300,300i,400,400i,500,500i,700,700i,900|Montserrat:400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=latin-ext');
 
 html {
 	line-height: 1.15; /* 1 */
@@ -405,7 +405,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #2c2c2c!important;
 	font-family: 'Open Sans', sans-serif!important;
 	/* font-family: 'Roboto', sans-serif; */
 	font-size: 16px;
@@ -625,7 +625,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	/* color: royalblue; */
+	color: #2c2c2c;
 }
 
 a:visited {
@@ -671,6 +671,24 @@ a:hover, a:active {
 	background-color: #008056;
 }
 
+.main-navigation a:link,
+.main-navigation a:visited {
+	color: #2c2c2c;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.main-navigation a:hover {
+
+}
+
+.main-navigation a:active {
+	
+}
+
 #scrollTop {
   display: none;
   position: fixed;
@@ -699,7 +717,9 @@ a:hover, a:active {
 	display: block;
 	float: left;
 	width: 100%; */
-	margin-left: 120px;
+	padding-left: 120px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 }
 
 .main-navigation ul {
@@ -750,6 +770,7 @@ a:hover, a:active {
 
 .nav-menu {
 	float: right;
+	margin: 0;
 }
 
 /* Small menu. */
@@ -760,6 +781,7 @@ a:hover, a:active {
 
 .sidebar-icon {
 	cursor: pointer;
+	padding: 12px 0;
 }
 
 .menu-line {
@@ -959,6 +981,12 @@ a:hover, a:active {
 
 .header-bottom {
 	padding: 30px 0;
+}
+
+.header-title {
+	/* color: #000; */
+	font-weight: 700;
+	font-size: 30px;
 }
 
 /*--------------------------------------------------------------

@@ -47,7 +47,7 @@
       } // End if
     });
 
-      // Hover effect on everything but the hovered link
+      // Social icons hover effect on everything but the hovered link
       jQuery('.header-social a').mouseover(function () {
           jQuery('.header-social a').not(jQuery(this)).addClass('hover');
       });
@@ -55,6 +55,15 @@
       jQuery('.header-social a').mouseout(function () {
           jQuery('.header-social a').not(jQuery(this)).removeClass('hover');
       });
+
+      // Primary menu hover effect on everything but the hovered link
+      // jQuery('.header-social a').mouseover(function () {
+      //     jQuery('.header-social a').not(jQuery(this)).addClass('hover');
+      // });
+      //
+      // jQuery('.header-social a').mouseout(function () {
+      //     jQuery('.header-social a').not(jQuery(this)).removeClass('hover');
+      // });
 
   });
 
