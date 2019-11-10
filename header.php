@@ -40,8 +40,8 @@
 							<a href="">BEST OFFER</a>
 						</div><!-- .header-offer -->
 						<ul class="header-contact float-right">
-							<li><i class="fas fa-phone-alt"></i> 064 2415-928</li>
-							<li><i class="fas fa-map-marker-alt"></i> Bogoljuba Čukića 44</li>
+							<li><i class="fas fa-phone-alt"></i>&nbsp&nbsp064 2415-928</li>
+							<li><i class="fas fa-map-marker-alt"></i>&nbsp&nbspBogoljuba Čukića 44</li>
 						</ul><!-- .header-contact -->
 					</div>
 				</div><!-- .row -->
@@ -52,8 +52,10 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header-title float-left">
+							<a href="<?php echo get_home_url(); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="logo" class="img-fluid" width="50">
 							<span>WebCode</span>
+							</a>
 						</div><!-- .header-title -->
 						<nav id="site-navigation" class="main-navigation float-left">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webcode' ); ?></button>
