@@ -678,24 +678,6 @@ a:hover, a:active {
 	color: #2c2c2c;
 }
 
-.main-navigation a:link
-/* , .main-navigation a:visited */ {
-	color: #2c2c2c;
-	font-size: 15px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: color 350ms ease-in-out;
-}
-
-.main-navigation a:hover {
-	color: #5b9693;
-}
-
-.main-navigation a:active {
-	color: #2c2c2c;
-}
-
 #scrollTop {
   display: none;
   position: fixed;
@@ -729,6 +711,24 @@ a:hover, a:active {
 	padding-bottom: 14px;
 }
 
+.main-navigation a:link,
+.main-navigation a:visited {
+	color: #2c2c2c;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: color 350ms ease-in-out;
+}
+
+.main-navigation a:hover {
+	color: #5b9693;
+}
+
+.main-navigation a:active {
+	color: #2c2c2c;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -736,14 +736,42 @@ a:hover, a:active {
 	padding-left: 0;
 }
 
+.sub-menu {
+	padding-left: 0!important;
+}
+
 .main-navigation ul ul {
 	/* box-shadow: 0px 5px 5px rgba(91, 150, 147, 0.2); */
-	border: 2px solid #5b9693;
+	border: 1px solid #5b9693;
+	background-color: #414141;
+	/* color: #5b9693; */
+	color: #FFF;
 	float: left;
 	position: absolute;
+	text-transform: lowercase;
 	top: 100%;
-	left: -999em;
+	left: -999em; /* OVO SAKRIVA SUBMENU DOK NE HOVERUJEŠ  */
 	z-index: 99999;
+	/* padding-left: 5px; */
+}
+
+.main-navigation ul ul>li a:link,
+.main-navigation ul ul>li a:visited {
+	/* font-size: 13px; */
+	font-weight: 500;
+	background-color: #414141;
+	color: #FFF;
+	text-transform: lowercase;
+	padding: 7px;
+}
+
+.main-navigation ul ul>li a:hover {
+	color: #000;
+	background: #5b9693;
+}
+
+.main-navigation ul ul li {
+	padding-left: 0;
 }
 
 .main-navigation ul ul ul {
