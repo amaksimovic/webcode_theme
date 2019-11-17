@@ -84,7 +84,13 @@ get_header();
 						</div><!-- .col-md-4 -->
 					</div><!-- .row -->
 				</div><!-- .container -->
-				<a href="#" class="btn" role="button">START NOW</a>
+				<div class="container">
+					<div class="row">
+						<div class="col-12 btn-cont">
+							<a href="#" class="btn" role="button">START NOW</a>
+						</div><!-- .col-12 -->
+					</div><!-- .row -->
+				</div><!-- .container -->
 			</section><!-- #main-services -->
 
 			<section id="main-portfolio">
@@ -93,7 +99,13 @@ get_header();
 					<p class="subtitle">CHECK OUT THE WORK WE'VE DONE</p>
 				</header>
 				<p>SLIDER (bootstrap ili plugin) SA SKRINŠATOVIMA MOŽDA</p>
-				<a href="#" class="btn" role="button">CONTACT US</a>
+				<div class="container">
+					<div class="row">
+						<div class="col-12 btn-cont">
+							<a href="#" class="btn" role="button">CONTACT US</a>
+						</div><!-- .col-12 -->
+					</div><!-- .row -->
+				</div><!-- .container -->
 			</section><!-- #main-portfolio -->
 
 			<section id="main-packages" class="parallax">
@@ -109,7 +121,7 @@ get_header();
 						    <div class="card-body">
 						      <h4 class="card-title">John Doe</h4>
 						      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-						      <a href="#" class="btn btn-primary">See Profile</a>
+						      <a href="#" class="btn">See Profile</a>
 						    </div><!-- .card-body -->
 						  </div><!-- .card -->
 						</div><!-- .col-md-4 -->
@@ -119,7 +131,7 @@ get_header();
 						    <div class="card-body">
 						      <h4 class="card-title">John Doe</h4>
 						      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-						      <a href="#" class="btn btn-primary">See Profile</a>
+						      <a href="#" class="btn">See Profile</a>
 						    </div><!-- .card-body -->
 						  </div><!-- .card -->
 						</div><!-- .col-md-4 -->
@@ -129,7 +141,7 @@ get_header();
 						    <div class="card-body">
 						      <h4 class="card-title">John Doe</h4>
 						      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-						      <a href="#" class="btn btn-primary">See Profile</a>
+						      <a href="#" class="btn">See Profile</a>
 						    </div><!-- .card-body -->
 						  </div><!-- .card -->
 						</div><!-- .col-md-4 -->
