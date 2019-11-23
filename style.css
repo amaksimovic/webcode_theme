@@ -73,6 +73,7 @@ html {
 
 body {
 	margin: 0;
+	height:100vh;
 }
 
 /**
@@ -731,18 +732,32 @@ a.btn:focus {
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 18px;
-  border: none;
+  height: 60px;
+	width: 60px;
+	border: 2px solid #e09b26;
   outline: none;
-  background-color: red;
-  color: white;
+	color: #e09b26;
+	background-color: transparent;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  /* padding: 10px; */
+  border-radius: 50%;
+	font-size: 18px;
 }
 
-#scrollTop:hover {
-  background-color: #555;
+#scrollTop i {
+	color: #e09b26;
+}
+
+#scrollTop:hover:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -5px;
+	bottom: -5px;
+	left: -5px;
+	right: -5px;
+	border-radius: 50%;
+	border: 2px solid #e09b26;
 }
 
 /*--------------------------------------------------------------
