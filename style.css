@@ -401,7 +401,7 @@ html {
 --------------------------------------------------------------*/
 
 body,
-button,
+/* button, */
 input,
 select,
 optgroup,
@@ -614,7 +614,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 7px;
 }
 
 input[type="text"]:focus,
@@ -705,13 +705,15 @@ a:hover, a:active {
 }
 
 a.btn:link,
-a.btn:visited {
+a.btn:visited,
+button.btn {
 	color: #FFF;
 	background-color: #e09b26;
 	transition: background-color 200ms linear, color 200ms linear;
 }
 
-a.btn:hover {
+a.btn:hover,
+button.btn:hover {
 	color: #e09b26;
 	background-color: #FFF;
 	border: 1px solid #e09b26;
@@ -1071,7 +1073,6 @@ a.btn:focus {
 
 .header-offer a {
 	padding: 0 20px;
-	background-color: #008056;
 	color: #FFF;
 	letter-spacing: 1px;
 	float: right;
@@ -1142,6 +1143,14 @@ section:not(#main-slider) {
 
 .entry-header {
 	padding-bottom: 20px;
+}
+
+#main-subscribe {
+	background-color: #b1b1b1;
+}
+
+#main-subscribe p {
+	color: #4a4a4a;
 }
 
 /*--------------------------------------------------------------
