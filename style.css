@@ -396,6 +396,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.form-control {
+	background-color: #efefef!important;
+}
+
+.form-control:focus {
+	border-color: #e09b26!important;
+	box-shadow: none!important;
+	background-color: #FFF!important;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -582,7 +592,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	/* border-color: #ccc #bbb #aaa; */
 }
 
 button:active, button:focus,
@@ -611,8 +621,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #2c2c2c!important;
+	border: 1px solid #e09b26;
 	border-radius: 3px;
 	padding: 7px;
 }
@@ -719,12 +729,14 @@ button.btn:hover {
 	border: 1px solid #e09b26;
 }
 
-a.btn:active {
+a.btn:active,
+button.btn:active {
 	color: #FFF;
 	background-color: #e09b26;
 }
 
-a.btn:focus {
+a.btn:focus,
+button.btn:focus {
 	box-shadow: none;
 }
 

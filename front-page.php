@@ -151,14 +151,14 @@ get_header();
 
 			<section id="main-subscribe">
 				<div class="container">
-					<div class="row">
+					<div class="row h-100">
 						<div class="col-md-6">
 							<header class="entry-header">
 								<h3 class="entry-title alignleft">Subscribe to Our Newsletter</h3>
 								<p class="alignleft">We have been on web marketing for 12 years helping you compete on Internet and converting your visitors</p>
 							</header>
 						</div><!-- .col-md-6 -->
-						<div class="col-md-6">
+						<div class="col-md-6 my-auto">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Your Email">
 								<div class="input-group-append">
